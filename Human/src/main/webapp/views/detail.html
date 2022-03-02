@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Detail</title>
+</head>
+<body>
+<fieldset>
+    <legend><h2>Human information</h2></legend>
+    <table th:if="${human.isPresent()}">
+        <tr>
+            <td>Name: </td>
+            <td th:text="${human.get().getName()}"></td>
+        </tr>
+        <tr>
+            <td>Phone: </td>
+            <td th:text="${human.get().getPhone()}"></td>
+        </tr>
+        <tr>
+            <td>Address: </td>
+            <td th:text="${human.get().getAddress()}"></td>
+        </tr>
+        <tr>
+            <td>ID Card: </td>
+            <td th:text="${human.get().getIdCard()}"></td>
+        </tr>
+    </table>
+</fieldset>
+<br>
+<br>
+<button type="button" class="btn btn-outline-dark"><a th:href="@{/home/}">Back to Home</a></button>
+</body>
+</html>
