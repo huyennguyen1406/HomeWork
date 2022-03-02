@@ -109,11 +109,6 @@ public class HomeController {
         return modelAndView;
     }
 
-//    @PostMapping("/search-by-name")
-//    public ModelAndView searchByName(@RequestParam("searchByName") String name, @PageableDefault(value = 5) Pageable pageable){
-//        return showAll(name,pageable);
-//    }
-
     @GetMapping("/edit")
     public ModelAndView editSong(@RequestParam("id") Long id) {
         ModelAndView modelAndView = new ModelAndView("edit");
